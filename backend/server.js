@@ -7,14 +7,13 @@ const app = express();
 const routes=require("./controller");
 
 // Middleware
+app.use(express.json());
 app.use(cors()); // Enable CORS if needed
 app.use(bodyParser.json()); // Parse JSON bodies
 
 // Route Definitions
 app.use("/",routes); 
-// app.get('/', (req, res) => {
-//     res.send("hello , its working!!!");
-// });
+app.use("/signup", routes);
 app.listen(3000,(req,res)=>{
     console.log("Server listening on 3000..");
 })

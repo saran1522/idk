@@ -8,4 +8,8 @@ router.post("/",(req,res)=>{
     const identity=req.body.name;
     res.send(identity);
 })
+router.post("/signup",(req,res)=>{
+    const { firstName, lastName, email, password } = req.body;
+    console.log(firstName, lastName, email,password);
+})
 module.exports = router;     
