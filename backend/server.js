@@ -8,7 +8,9 @@ const routes=require("./controller");
 
 // Middleware
 app.use(express.json());
-app.use(cors()); // Enable CORS if needed
+app.use(cors({
+    origin: 'http://localhost:5173'
+    }));
 app.use(bodyParser.json()); // Parse JSON bodies
 
 // Route Definitions

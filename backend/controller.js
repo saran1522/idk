@@ -9,7 +9,8 @@ router.post("/",(req,res)=>{
     res.send(identity);
 })
 router.post("/signup",(req,res)=>{
-    const { firstName, lastName, email, password } = req.body;
-    console.log(firstName, lastName, email,password);
+    const {email,password}=req.body;
+    console.log(email,password);
+    res.status(200).json({message:"Signup Successful!"})
 })
 module.exports = router;     
